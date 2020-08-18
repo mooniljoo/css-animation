@@ -1,0 +1,98 @@
+@import url("https://fonts/googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap");
+
+:root {
+  --main-color: #012442;
+  --typo-black: #333;
+  --typo-white: #fff;
+}
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  background: var(--main-color);
+  min-height: 1500px;
+}
+section.main {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section.main:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(to top, var(--main-color), transparent);
+  /* background: linear-gradient(0deg, rgba(10,42,67,1) 0%, rgba(255,255,255,0) 50%); */
+  z-index: 9999;
+}
+section.main:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--main-color);
+  z-index: 9999;
+  mix-blend-mode: color;
+}
+section.main img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+#title {
+  position: relative;
+  color: var(--typo-white);
+  font-size: 10em;
+  z-index: 1;
+  line-height: 0.8em;
+  /* text-shadow: rgb(82, 82, 82) 0px 3px 20px; */
+}
+#road {
+  z-index: 2;
+}
+#moon {
+  height: auto;
+}
+main {
+  color: var(--typo-white);
+}
+main > div {
+  width: 1024px;
+  margin: 0 auto;
+}
+@media (max-width: 1260px) {
+  #title {
+    font-size: 8.5em;
+  }
+}
+@media (max-width: 1024px) {
+  #title {
+    font-size: 8em;
+  }
+}
+@media (max-width: 768px) {
+  #title {
+    font-size: 5.6em;
+  }
+}
+@media (max-width: 480px) {
+  #title {
+    font-size: 4em;
+    margin-bottom: 80px;
+  }
+}
